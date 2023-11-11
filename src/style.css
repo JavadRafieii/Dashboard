@@ -1,0 +1,40 @@
+#swal2-title {
+    font-family: 'Yekan-Bold';
+    font-size: 1.2rem;
+}
+
+.swal2-confirm {
+    font-family: 'Yekan-Regular';
+    background: linear-gradient(195deg, #66bb6a, #43a047) !important;
+}
+
+.swal2-cancel {
+    font-family: 'Yekan-Regular';
+    background: linear-gradient(195deg, #ec407a, #d81b60) !important;
+}
+
+.swal-custom {
+    height: auto;
+    /* width: 100%;
+    max-width: 800px; */
+}
+
+#swal2-validation-message {
+    font-family: 'Yekan-Bold';
+    color: #d91e61;
+}
+
+div:where(.swal2-container) div:where(.swal2-validation-message)::before {
+    background-color: #d91e61 !important;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+.no-scrollbar {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}

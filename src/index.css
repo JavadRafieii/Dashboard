@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: "Yekan-Light";
+    src: url(./Fonts/YekanBakhEN03Light.eot),
+        url(./Fonts/YekanBakhEN03Light.ttf),
+        url(./Fonts/YekanBakhEN03Light.woff)
+}
+
+@font-face {
+    font-family: "Yekan-Regular";
+    src: url(./Fonts/YekanBakhEN04Regular.eot),
+        url(./Fonts/YekanBakhEN04Regular.ttf),
+        url(./Fonts/YekanBakhEN04Regular.woff),
+}
+
+@font-face {
+    font-family: "Yekan-Bold";
+    src: url(./Fonts/YekanBakhEN06Bold.eot),
+        url(./Fonts/YekanBakhEN06Bold.ttf),
+        url(./Fonts/YekanBakhEN06Bold.woff),
+}
