@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import Menu from "./Menu";
 import { AiFillAppstore } from "react-icons/ai";
 import { AiFillLayout } from "react-icons/ai";
@@ -12,6 +12,7 @@ import { AiOutlineForm } from "react-icons/ai";
 import FirstSection from "./First-section";
 import Login from "./login";
 import { useGlobalState } from "./context";
+import Account from "./account";
 
 export default function Dashboard() {
 
@@ -34,12 +35,16 @@ export default function Dashboard() {
     return (
         <React.Fragment>
             {login
-                ? <section className="p-4 w-full">
-                    <div className="grid grid-cols-12 gap-5">
-                        <Menu menu={state.menu} />
-                        <FirstSection />
-                    </div>
-                </section>
+                ?
+                <React.Fragment>
+                    <Account />
+                    <section className="p-4 w-full">
+                        <div className="grid grid-cols-12 gap-5">
+                            <Menu menu={state.menu} />
+                            <FirstSection />
+                        </div>
+                    </section>
+                </React.Fragment>
                 : <Login />
             }
         </React.Fragment>

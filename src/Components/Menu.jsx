@@ -4,7 +4,7 @@ import Buttons from "./Buttons";
 
 export default function Menu(prop) {
     return (
-        <div className="col-span-2 h-[95vh] rounded-xl bg-gray shadow-all p-5 flex flex-col justify-between">
+        <div className="col-span-2 h-[86vh] rounded-xl bg-gray shadow-all p-5 flex flex-col justify-between">
             <Lists menu={prop.menu} />
             <Buttons />
         </div>

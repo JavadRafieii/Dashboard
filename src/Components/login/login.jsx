@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { useGlobalDispatch, actionType } from "../context";
 import Swal from 'sweetalert2';
 
@@ -8,6 +8,18 @@ export function Login() {
     const [pass, setPass] = useState("");
 
     const dispatch = useGlobalDispatch();
+
+    const ref = useRef();
+
+    useEffect(() => {
+        ref.current.focus();
+        const login = JSON.parse(localStorage.getItem("login"));
+        if (login) {
+            dispatch({
+                type: actionType.LOGIN_USER_TO_DASHBOARD,
+            })
+        };
+    }, [dispatch]);
 
     function submit(event) {
         event.preventDefault();
@@ -29,6 +41,7 @@ export function Login() {
                                 password: password
                             }
                         });
+                        localStorage.setItem('login', JSON.stringify(true));
                     } else {
                         Swal.fire({
                             title: "نام کاربری و یا رمز عبور شما اشتباه است، مجدد تلاش کنید!",
@@ -45,7 +58,7 @@ export function Login() {
                 <h3 className="text-gray-900 font-Yekan-Bold text-xl text-center">ورود به داشبورد</h3>
                 <form>
                     <label htmlFor="" className="font-Yekan-Bold text-gray-900 text-lg block my-2">نام کاربری:</label>
-                    <input onChange={(event) => setUser(event.target.value)} value={user} type="text" className="border-[2px] w-full h-10 rounded-md p-2 text-gray-500 font-Yekan-Regula" />
+                    <input ref={ref} onChange={(event) => setUser(event.target.value)} value={user} type="text" className="border-[2px] w-full h-10 rounded-md p-2 text-gray-500 font-Yekan-Regula" />
                     <label htmlFor="" className="font-Yekan-Bold text-gray-900 text-lg block my-2">رمز عبور:</label>
                     <input onChange={(event) => setPass(event.target.value)} value={pass} type="password" className="border-[2px] w-full h-10 rounded-md p-2 text-gray-500 font-Yekan-Regula" />
                     <button onClick={submit} className="w-full bg-green py-2 px-2 font-Yekan-Bold text-white text-base rounded-md shadow-all mt-5">ورود</button>

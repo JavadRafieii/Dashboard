@@ -44,7 +44,7 @@ export default class FirstSection extends React.Component {
     render() {
 
         return (
-            <div className="col-span-10 h-[95vh] overflow-y-scroll no-scrollbar">
+            <div className="col-span-10 h-[86vh] overflow-y-scroll no-scrollbar">
                 <Cards cards={this.state.cards} />
                 <Charts />
                 <Users

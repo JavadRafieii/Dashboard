@@ -22,3 +22,14 @@
         url(./Fonts/YekanBakhEN06Bold.ttf),
         url(./Fonts/YekanBakhEN06Bold.woff),
 }
+
+
+.account:hover+ul {
+    visibility: visible;
+    opacity: 1;
+}
+
+.dropdown:hover {
+    visibility: visible;
+    opacity: 1;
+}

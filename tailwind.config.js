@@ -23,6 +23,7 @@ module.exports = {
         "pale-gray": "#c7c7c733",
         "primary-color": "#e91e63",
         "blue-color": "#1a73e8",
+        "light-gray": "#f0f2f5",
       },
     },
     container: {
